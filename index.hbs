@@ -1,0 +1,43 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+<header class="main-header">
+
+    <div class="logo">
+        {{#if @blog.cover}}<img src="{{@blog.cover}}" />{{/if}}
+        <div class="rebranding">
+            <div class="word">anarchist</div>
+            <div class="description">
+            a person who believes progress can be found in disorder <br />
+            a person who advocates voluntary cooperation
+            </div>
+        </div>
+    </div>
+
+    <nav class="index-main-nav">
+         <a class="button" href="{{@blog.url}}">about</a>
+         <a class="button" href="{{@blog.url}}">contact</a>
+         <a class="button" href="{{@blog.url}}">twitter</a>
+         <a class="button" href="{{@blog.url}}">linked in</a>
+    </nav>
+
+
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+</header>
+
+{{! The main content area on the homepage }}
+<main id="content" class="content post-list" role="main">
+
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+
+</main>
+
+<footer class="site-footer-index">
+    <div class="footer-content">
+      If you have any questions about this blog or me, Emil Cardell, start by visiting the <a href="/about">about page</a> or feel free to send me <a href="mailto:blog+emil.cardell@gmail.com">e-mail.</a></p>
+          <section class="copyright"><a href="{{@blog.url}}">Emil Cardell</a> &copy; {{date format="YYYY"}}</section>
+      </div>
+
+</footer>

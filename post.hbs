@@ -1,0 +1,71 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<div class="sidebar {{#if image}}" style="background-image: url({{image}}){{else}}{{/if}}">
+    <header class="main-header post-head">
+
+
+        <div class="blog-logo-wrapper">
+            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+        </div>
+
+        <nav class="post-nav">
+
+            <a class="button" href="{{@blog.url}}">about</a>
+            <a class="button" href="{{@blog.url}}">contact</a>
+            <a class="button" href="{{@blog.url}}">twitter</a>
+            <a class="button" href="{{@blog.url}}">linked in</a>
+
+        </nav>
+    </header>
+
+
+        <div class="post-footer-content">
+
+        </div>
+
+
+</div>
+
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+
+        <header class="post-header">
+            <h1 class="post-title">
+                <span>{{title}}</span>
+              </h1>
+        </header>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+         <section class="post-meta">
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"># {{date format="DD MMMM YYYY"}}</time>
+            {{tags separator=" "}}
+
+        </section>
+
+    </article>
+
+
+
+ <footer class="site-footer post-site-footer">
+        <div class="footer-content">
+                <p>I hope you've enjoyed these ramblings. If you have something to add, want to give feedback, comment on a specific matter or just want say hello please send me an <a href="mailto:blog+emil.cardell@gmail.com">e-mail.</a></p>
+                <p>
+If you have any questions about this blog or me, Emil Cardell, start by visiting the <a href="/about">about page</a> or feel free to send me <a href="mailto:blog+emil.cardell@gmail.com">e-mail.</a></p>
+                <section class="copyright"><a href="{{@blog.url}}">Emil Cardell</a> &copy; {{date format="YYYY"}}</section>
+            </div>
+
+    </footer>
+</main>
+
+
+{{/post}}

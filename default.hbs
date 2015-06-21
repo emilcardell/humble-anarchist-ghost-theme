@@ -26,7 +26,7 @@
 <body class="{{body_class}}">
 
     {{! Everything else gets inserted here }}
-    {{{body}}} 
+    {{{body}}}
 
 
 
@@ -34,8 +34,11 @@
     {{ghost_foot}}
 
     {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="{{asset "js/snap.svg-min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
+
 
 </body>
 </html>

@@ -604,6 +604,7 @@ div.main-header-content {
     display: inline-block;
     background: none !important;
     border: none !important;
+    margin-top: 5rem;
 }
 
 .blog-logo img {
@@ -778,21 +779,19 @@ div.main-header-content {
 /* Every post, on every page, gets this style on its <article> tag */
 .sidebar {
     background-color: #f7f7f7;
+    max-width: 150px;
     position: fixed;
-    width: 230px;
     height: 100%;
-    float: left;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center top;
-    margin-top: -8rem;
-    border-right: 1px solid #f3f3f3;
+    z-index: 9999;
+    width: 100%;
 }
 
 .post-nav {
-    text-align: right;
-    margin-right: 5.5rem;
+    text-align: center;
+    padding: 10rem 0 5rem 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .post-footer-tags {
@@ -849,6 +848,8 @@ div.main-header-content {
     text-decoration: none;
     padding: 0 1rem;
     display: block;
+    text-align: right;
+    padding-right: 4rem;
 }
 
 .post-nav a:hover {
@@ -860,18 +861,20 @@ div.main-header-content {
 
 .post {
     position: relative;
-    width: 80%;
-    max-width: 500px;
-    margin-left: 10rem;
-    padding-bottom: 4rem;
+    width: 100%;
     word-break: break-word;
     hyphens: auto;
+}
+
+.post-list {
+    background-color: #f7f7f7;
+    padding: 5rem 0 10rem 0;
 }
 
 .post-list .post {
     max-width: 500px;
     text-align: center;
-    margin: 1rem auto;
+    margin: 5rem auto;
 }
 
 .post-list .post-meta {
@@ -889,10 +892,13 @@ div.main-header-content {
 
 .post-list .post-title a:hover {
     margin-bottom: 0;
-    background-color: #f3f3f3;
-    padding-right: 1rem;
-    border-left: 1rem solid #f3f3f3;
-    margin-left: -1rem;
+    background-color: #EF4623;
+    padding-right: 3rem;
+    border-left: 3rem solid #EF4623;
+    margin-left: -3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    color: #fff;
 }
 
 .post-title {
@@ -907,11 +913,7 @@ div.main-header-content {
 
 .post-template .post-title span {
   font-size: 3.5rem;
-  background-color: #f3f3f3;
-  padding-right: 1rem;
-  border-left: 1rem solid #f3f3f3;
-  margin-left: -1rem;
-
+  color: #EF4623;
 }
 
 
@@ -1032,30 +1034,31 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 .post-template .post-header {
-   margin-bottom: 2.5rem;
+   width: 100%;
+   padding: 8rem 0 0 0;
 }
 
 .post-template .post-title {
-    margin-bottom: 0;
+    margin: 0 0 0 27rem;
+    max-width: 500px;
+    width: 80%;
 }
 
 .post-template .post-meta {
     margin: 0;
+    margin: 0 0 0 27rem;
+    max-width: 500px;
+    width: 80%;
 }
 
 /* Stop .full-img from creating horizontal scroll - slight hack due to
    imperfections with browser width % calculations and rounding */
 .post-template .content {
-    overflow: hidden;
-    margin-left: 250px;
-    margin-top: 8rem;
 }
 
 /* Tweak the .post wrapper style */
 .post-template .post {
-    margin-top: 2rem;
-    border-bottom: none;
-    padding-bottom: 0;
+    margin: 0 auto;
 }
 
 /* Kill that stylish little circle that was on the border, too */
@@ -1063,6 +1066,14 @@ body:not(.post-template) .post-title {
     display: none;
 }
 
+.post-content {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 0 0 27rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-top: 3rem;
+}
 .post-content a:hover {
     border-color: #F68A21;
     color: #F68A21;
@@ -1093,9 +1104,9 @@ body:not(.post-template) .post-title {
 }
 
 .post-header .full-img {
-    width: 200%;
-    max-width: none;
-    margin: -5% -50% 5% -50%;
+    background-color: #EF4623;
+    width: 100%;
+    padding: 8rem 0 3rem 0;
 }
 
 /* The author credit area after the post */
@@ -1489,40 +1500,44 @@ body:not(.post-template) .post-title {
 /* ==========================================================================
    9. Footer - The bottom of every page
    ========================================================================== */
-
+.post-site-footer {
+    width: 100%;
+}
 .post-site-footer .footer-about {
     width: 100%;
 }
 
 .site-footer {
-    position: relative;
-    width: 80%;
-    max-width: 440px;
-    margin-left: 10rem;
-    background-color: #f7f7f7;
-    padding: 30px;
-    margin-top: 3rem;
+    width: 100%;
+    background-color: #444;
+    padding: 10rem 0;
+    margin-top: 10rem;
+    color: #fff;
 }
 
 .site-footer-index {
   position: relative;
-  width: 80%;
-  max-width: 620px;
-  background-color: #f7f7f7;
-  padding: 30px;
-  margin: 0 auto 5rem auto;
+  width: 100%;
+  padding: 10rem 0;
+  color: #fff;
+  background-color: #444;
 }
 
 
-.site-footer a {
+
+.site-footer-index a, .site-footer a {
     color: #7a8B89;
     text-decoration: none;
     border-bottom: 1px dotted #7a8B89;
 }
 
-.site-footer a:hover {
+.site-footer-index a:hover, .site-footer a:hover {
     color: #F68A21;
     border-color: #F68A21;
+}
+
+.copyright{
+    text-align: center;
 }
 
 
@@ -1562,10 +1577,35 @@ body:not(.post-template) .post-title {
 
 .blog-logo-wrapper {
     display: block;
-    width: 80%;
-    margin: 5rem auto 0 auto;
-    padding-bottom: 5rem;
     text-align: center;
+}
+
+.blog-logo-wrapper img {
+    max-height: 150px;
+}
+
+.footer-content {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 0 0 27rem;
+}
+.blog-logo-wrapper-top {
+    display: none;
+}
+
+.menu-button {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin: 4rem 4rem 0 0;
+    float: right;
+    display: block;
+    background: none;
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+    display: none;
 }
 
 
@@ -1576,17 +1616,60 @@ body:not(.post-template) .post-title {
 @media only screen and (max-width: 1020px) {
 
     .sidebar {
-        background-color: #231F20;
-        width: 100%;
-        height: 200px;
-        float: none;
         position: relative;
+        height: 150px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-content {
+        margin: 0  auto;
+        padding: 10rem 0;
+    }
+
+    .post-nav {
+      text-align: center;
+      padding: 5rem 0;
+      position: absolute;
+      top: 151px;
+      right: 0;
+      background-color: #f7f7f7;
+      width: 100%;
+      height: 100%;
+      min-height: 210px;
+      display: none;
+    }
+
+    .post-template .post-meta, .post-content, .post-template .post-title {
+        margin: 3rem auto;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .post-nav a {
+        margin-bottom: 3rem;
+        text-align: center;
     }
 
     .blog-logo-wrapper {
-        padding-top: 2rem;
-        margin-top: 8rem;
-        padding-bottom: 2rem;
+        display: none;
+    }
+
+    .blog-logo-wrapper-top .blog-logo img {
+        max-height: 100px;
+        margin-left: 4rem;
+    }
+
+    .blog-logo {
+        margin-top: 2rem;
+    }
+
+    .blog-logo-wrapper-top {
+        display: block;
+        float: left;
+
     }
 
     .post-template .content {
@@ -1745,9 +1828,7 @@ body:not(.post-template) .post-title {
         margin-top: 0;
     }
 
-    .footer-content {
-        width: 100%;
-    }
+
 
     .site-footer {
         margin: 0;
@@ -2043,6 +2124,35 @@ body:not(.post-template) .post-title {
 /* ==========================================================================
    12. Animations
    ========================================================================== */
+
+
+   .morph-shape {
+   	position: absolute;
+   	width: 100%;
+   	height: 100%;
+   	top: 0;
+   	left: 0;
+   }
+
+   .morph-shape svg path,
+   .morph-shape svg line {
+   	stroke: #7a8B89;
+   	stroke-width: 4px;
+   	-webkit-transition: -webkit-transform 0.3s;
+   	transition: transform 0.3s;
+   }
+
+   .menu-button--open .morph-shape svg path:first-of-type {
+   	-webkit-transform: translate3d(0, -8px, 0);
+   	transform: translate3d(0, -8px, 0);
+   }
+
+   .menu-button--open .morph-shape svg path:nth-of-type(2) {
+   	-webkit-transform: translate3d(0, 8px, 0);
+   	transform: translate3d(0, 8px, 0);
+   }
+
+
 
 /* Used to fade in title/desc on the home page */
 @-webkit-keyframes fade-in-down {

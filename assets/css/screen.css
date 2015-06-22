@@ -1072,7 +1072,7 @@ body:not(.post-template) .post-title {
     margin: 0 0 0 27rem;
     font-size: 1.8rem;
     line-height: 2.8rem;
-    margin-top: 3rem;
+    margin-top: 4.5rem;
 }
 .post-content a:hover {
     border-color: #F68A21;
@@ -1536,6 +1536,10 @@ body:not(.post-template) .post-title {
     border-color: #F68A21;
 }
 
+.site-footer-index .footer-content {
+    margin: 0 auto;
+}
+
 .copyright{
     text-align: center;
 }
@@ -1641,7 +1645,7 @@ body:not(.post-template) .post-title {
     }
 
     .post-template .post-meta, .post-content, .post-template .post-title {
-        margin: 3rem auto;
+        margin: 4.5rem auto;
     }
 
     .menu-button {

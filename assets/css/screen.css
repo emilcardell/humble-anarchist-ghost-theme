@@ -837,6 +837,8 @@ div.main-header-content {
     font-weight: 700;
     text-decoration: none;
     padding: 0 1rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
 }
 
 .index-main-nav a:hover {
@@ -849,6 +851,8 @@ div.main-header-content {
     text-decoration: none;
     padding: 0 1rem;
     display: block;
+    text-transform: uppercase;
+    font-size: 1.3rem;
 }
 
 .post-nav a:hover {

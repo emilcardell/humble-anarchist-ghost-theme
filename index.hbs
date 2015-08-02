@@ -16,10 +16,10 @@
     </div>
 
     <nav class="index-main-nav">
-         <a class="button" href="{{@blog.url}}">about</a>
-         <a class="button" href="{{@blog.url}}">contact</a>
-         <a class="button" href="{{@blog.url}}">twitter</a>
-         <a class="button" href="{{@blog.url}}">linked in</a>
+      <a class="button" href="{{@blog.url}}/about">about</a>
+      <a class="button" href="{{@blog.url}}/contact">contact</a>
+      <a class="button" href="https://twitter.com/emilcardell">twitter</a>
+      <a class="button" href="https://www.linkedin.com/in/emilcardell">linked in</a>
     </nav>
 
 
@@ -35,9 +35,20 @@
 </main>
 
 <footer class="site-footer-index">
+  <section class="copyright">&copy; Emil Cardell {{date format="YYYY"}}</section>
+
     <div class="footer-content">
+      <p>
       If you have any questions about this blog or me, Emil Cardell, start by visiting the <a href="/about">about page</a> or feel free to send me <a href="mailto:blog+emil.cardell@gmail.com">e-mail.</a></p>
-          <section class="copyright"><a href="{{@blog.url}}">Emil Cardell</a> &copy; {{date format="YYYY"}}</section>
+      </p>
+      <p>
+      Opinions expressed, by me, on this site are my personal opinions and not necessarily shared by my employer.
+      </p>
+
+      <p>
+      All blog posts on this blog is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>
+      </p>
+
       </div>
 
 </footer>

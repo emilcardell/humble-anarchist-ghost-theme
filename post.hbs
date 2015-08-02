@@ -11,15 +11,19 @@
 
 
         <div class="blog-logo-wrapper">
-            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Humble Anarchist" /></a>{{/if}}
+        </div>
+
+        <div class="blog-logo-wrapper--top">
+            <a class="blog-logo" href="{{@blog.url}}"><img src="{{asset "images/humble-anarchist-head-text-left.png"}}" alt="Humble Anarchist" /></a>
         </div>
 
         <nav class="post-nav">
 
-            <a class="button" href="{{@blog.url}}">about</a>
-            <a class="button" href="{{@blog.url}}">contact</a>
-            <a class="button" href="{{@blog.url}}">twitter</a>
-            <a class="button" href="{{@blog.url}}">linked in</a>
+            <a class="button" href="{{@blog.url}}/about">about</a>
+            <a class="button" href="{{@blog.url}}/contact">contact</a>
+            <a class="button" href="https://twitter.com/emilcardell">twitter</a>
+            <a class="button" href="https://www.linkedin.com/in/emilcardell">linked in</a>
 
         </nav>
     </header>
@@ -54,14 +58,38 @@
 
     </article>
 
+    <section class="post-comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'humbleanarchist';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </section>
+
 
 
  <footer class="site-footer post-site-footer">
+        <section class="copyright">&copy; Emil Cardell {{date format="YYYY"}}</section>
+
         <div class="footer-content">
                 <p>I hope you've enjoyed these ramblings. If you have something to add, want to give feedback, comment on a specific matter or just want say hello please send me an <a href="mailto:blog+emil.cardell@gmail.com">e-mail.</a></p>
                 <p>
 If you have any questions about this blog or me, Emil Cardell, start by visiting the <a href="/about">about page</a> or feel free to send me <a href="mailto:blog+emil.cardell@gmail.com">e-mail.</a></p>
-                <section class="copyright"><a href="{{@blog.url}}">Emil Cardell</a> &copy; {{date format="YYYY"}}</section>
+            <p>
+            Opinions expressed, by me, on this site are my personal opinions and not necessarily shared by my employer.
+            </p>
+
+            <p>
+            All blog posts on this blog is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>
+            </p>
             </div>
 
     </footer>

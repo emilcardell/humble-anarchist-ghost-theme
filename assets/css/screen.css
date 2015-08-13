@@ -788,6 +788,7 @@ div.main-header-content {
     background-position: center top;
     margin-top: -8rem;
     border-right: 1px solid #f3f3f3;
+    padding-bottom: 8rem;
 }
 
 .post-nav {
